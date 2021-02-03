@@ -13,7 +13,6 @@ def f(required_arg, optional_arg1="1"):
     print(required_arg, optional_arg1)
 
 
-
 def main():
     my_function(first_name='John', last_name='Jack', age=40 )
     f('Hello', 10)

@@ -1,0 +1,20 @@
+19:53:40,561 root INFO Running Urban Planning
+19:53:40,561 root INFO Let's log in a file
+19:58:59,34 root INFO Running Urban Planning
+19:59:36,945 root INFO Running Urban Planning
+20:06:54,154 root INFO Running Urban Planning
+20:07:59,330 root INFO Running Urban Planning
+20:08:26,288 root INFO Running Urban Planning
+20:10:51,332 root INFO Running Urban Planning
+20:12:34,194 root INFO Running Urban Planning
+20:15:37,791 root INFO Running Urban Planning
+20:15:48,984 root INFO Running Urban Planning
+20:15:48,985 root INFO Read a JSON a file
+20:17:15,451 root INFO Running Urban Planning
+20:17:15,451 root INFO Read a JSON a file
+20:17:35,946 root INFO Running Urban Planning
+20:17:35,946 root INFO Read a JSON a file
+20:19:17,359 root INFO Running Urban Planning
+20:19:17,359 root INFO Read a JSON a file
+20:20:14,394 root INFO Running Urban Planning
+20:20:14,394 root INFO Read a JSON a file
