@@ -1,0 +1,38 @@
+{
+  "Records": [
+    {
+      "eventVersion": "2.1",
+      "eventSource": "aws:s3",
+      "awsRegion": "us-east-1",
+      "eventTime": "2021-02-10T01:28:52.558Z",
+      "eventName": "ObjectCreated:Put",
+      "userIdentity": {
+        "principalId": "AWS:AIDAZWOJ3UI3T2NMPAIMA"
+      },
+      "requestParameters": {
+        "sourceIPAddress": "68.132.59.11"
+      },
+      "responseElements": {
+        "x-amz-request-id": "2E45A3C62E13D66C",
+        "x-amz-id-2": "NZ7sX7k+4CFcg/vngwdRyBdlLbk7iJZJMw1KMQMTsp8QhorEwMx0+h//tZ3e/L12mpPR39dmDD7FvJJc0NDWhbiTXtua8d2Ku57gm99k9go="
+      },
+      "s3": {
+        "s3SchemaVersion": "1.0",
+        "configurationId": "object-creation",
+        "bucket": {
+          "name": "demo-b2003-izaanit",
+          "ownerIdentity": {
+            "principalId": "AF4ZHGIO0PPM9"
+          },
+          "arn": "arn:aws:s3:::demo-b2003-izaanit"
+        },
+        "object": {
+          "key": "dvdrental.tar",
+          "size": 2835456,
+          "eTag": "b1d5a8188b251edeb4659cce04d23177",
+          "sequencer": "00602336DC1656515F"
+        }
+      }
+    }
+  ]
+}
