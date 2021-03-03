@@ -1,0 +1,38 @@
+{
+  "AWSTemplateFormatVersion" : "2010-09-09",
+  "Resources" : {
+    "ServiceTable":{
+      "Type":"AWS::DynamoDB::Table",
+      "Properties":{
+        "TableName":"Service",
+        "AttributeDefinitions":[
+          {
+            "AttributeName":"key",
+            "AttributeType":"S"
+          }
+        ],
+        "KeySchema":[
+          {
+            "AttributeName":"key",
+            "KeyType":"HASH"
+          }
+        ],
+        "ProvisionedThroughput":{
+          "ReadCapacityUnits":5,
+          "WriteCapacityUnits":1
+        }
+      }
+    },
+    "NestedStack" : {
+      "Type" : "AWS::CloudFormation::Stack",
+      "DeletionPolicy": "Retain",
+      "Properties" : {
+        "TemplateURL" : "https://s3.amazonaws.com/cloudformation-templates-us-east-2/EC2ChooseAMI.template",
+        "Parameters" : {
+          "InstanceType" : "t1.micro",
+          "KeyName" : "mykey"
+        }
+      }
+    }
+  }
+}
