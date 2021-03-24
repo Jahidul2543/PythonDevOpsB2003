@@ -1,0 +1,66 @@
+{
+  "index_patterns": [
+    "api_log*"
+  ],
+    "aliases" : {
+      "api_log": {}
+    },
+    "mappings" : {
+      "properties" : {
+        "actor" : {
+          "type" : "text",
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "director" : {
+          "type" : "text",
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "genre" : {
+          "type" : "text",
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "title" : {
+          "type" : "text",
+          "fields" : {
+            "keyword" : {
+              "type" : "keyword",
+              "ignore_above" : 256
+            }
+          }
+        },
+        "year" : {
+          "type" : "long"
+        }
+      }
+    },
+    "settings" : {
+      "index" : {
+        "number_of_shards" : "1",
+        "number_of_replicas" : "1",
+        "opendistro": {
+          "index_state_management": {
+            "policy_id": "hot_delete_lifecycle_policy"
+          }
+        },
+        "highlight": {
+          "max_analyzed_offset": "1000000000"
+        }
+      }
+    }
+
+}

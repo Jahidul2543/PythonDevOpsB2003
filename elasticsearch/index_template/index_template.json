@@ -1,0 +1,56 @@
+{
+  "index_patterns": [
+    "api_log*"
+  ],
+  "aliases": {
+    "api_log": {}
+  },
+  "settings" : {
+    "index" : {
+      "number_of_shards" : "1",
+      "number_of_replicas" : "1",
+      "opendistro": {
+        "index_state_management": {
+          "policy_id": "api_log_lifecycle_policy"
+        }
+      },
+      "highlight": {
+        "max_analyzed_offset": "1000000000"
+      }
+    }
+  },
+  "mappings" : {
+    "properties" : {
+      "@timestamp" : {
+        "type" : "date"
+      },
+      "app_timestamp" : {
+        "type" : "date"
+      },
+      "description" : {
+        "type" : "text",
+        "fields" : {
+          "keyword" : {
+            "type" : "keyword",
+            "ignore_above" : 256
+          }
+        }
+      },
+      "ip_address" : {
+        "type" : "text",
+        "fields" : {
+          "keyword" : {
+            "type" : "keyword",
+            "ignore_above" : 256
+          }
+        }
+      },
+      "process_id" : {
+        "type" : "long"
+      },
+      "record_id" : {
+        "type" : "long"
+      }
+    }
+  }
+}
